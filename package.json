@@ -24,7 +24,7 @@
     "configuration": {
       "interval": "number"
     },
-    "category": "script",
+    "category": "clipboard",
     "build_command": "npm run build",
     "dist_folder": "dist",
     "dist_file": "dist/main.js"

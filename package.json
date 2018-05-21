@@ -1,7 +1,7 @@
 {
-  "name": "nexuscript-timer-hook",
+  "name": "nexuscript-clipboard-hook",
   "version": "1.0.0",
-  "description": "",
+  "description": "Notify nexuscript of clipboard changes",
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack --mode development",
@@ -16,5 +16,17 @@
   "dependencies": {
     "clipboardy": "^1.2.3",
     "nexusdk": "github:wizebin/nexusdk"
+  },
+  "nexuscript": {
+    "type": "hook",
+    "author": "nexuscript",
+    "price": "free",
+    "configuration": {
+      "interval": "number"
+    },
+    "category": "script",
+    "build_command": "npm run build",
+    "dist_folder": "dist",
+    "dist_file": "dist/main.js"
   }
 }

@@ -12,10 +12,10 @@ export default wrapHook((properties, messages) => {
     if (running === 0) {
       running += 1;
       const tempData = clipboardy.readSync();
-      if (tempData !== clipboardData) {
+      if (clipboardData !== null && tempData !== clipboardData) {
         trigger({ interval, data: tempData });
-        clipboardData = tempData;
       }
+        clipboardData = tempData;
       running -= 1;
     }
   }, interval);
